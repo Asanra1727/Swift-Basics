@@ -1,0 +1,28 @@
+import UIKit
+import CoreFoundation
+
+var arrayInput = [1,5,2]
+var dictionaryOutput = [Int:Int]()
+
+for key in arrayInput {
+    
+    dictionaryOutput[key] = 2 * key
+    
+    for (key, value) in dictionaryOutput {
+        
+        print("\(key) : \(value)")
+    }
+}
+
+func map(integers: [Int]) -> Dictionary<Int, Int> {
+    
+    var results = Dictionary<Int, Int>()
+    for i in integers {
+        
+        var n = integers[i]
+        
+        results[n] = integers[i]*2
+    }
+    
+    return results
+}
